@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FareKite Flights – Compare Cheap Flights & Affordable Airfare</title>
+
+  <meta name="description" content="Compare FareKite flights, find affordable airfare, explore flight options, and choose the right flight for your next domestic or international trip.">
+
+  <meta name="keywords" content="FareKite Flights, FareKite flight comparison, FareKite cheap flights, FareKite airfare, cheap flight comparison, affordable flights, flight search online, compare airline prices">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f9fc;
+      color: #263238;
+      line-height: 1.7;
+    }
+
+    /* Header */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e8edf2;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 95px;
+  height: 70px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+nav a {
+  color: #37474f;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #1677ff;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .logo img {
+    width: 80px;
+    height: 60px;
+  }
+
+  nav {
+    gap: 15px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+}
+
+    /* Header 
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e8edf2;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 700;
+      color: #1677ff;
+      text-decoration: none;
+    }
+    .logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+  display: block;
+}
+
+    nav a {
+      color: #37474f;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #1677ff;
+    }*/
+
+    /* Hero */
+    .hero {
+      background: #eaf4ff;
+      padding: 75px 20px;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .hero h1 {
+      font-size: 45px;
+      line-height: 1.2;
+      color: #172b4d;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #607080;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .hero-button {
+      display: inline-block;
+      margin-top: 30px;
+      background: #1677ff;
+      color: white;
+      text-decoration: none;
+      padding: 13px 25px;
+      border-radius: 7px;
+      font-weight: 600;
+    }
+
+    .hero-button:hover {
+      background: #075dcc;
+    }
+
+    /* Blog */
+    .blog-container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .blog-card {
+      background: #ffffff;
+      padding: 45px;
+      border-radius: 12px;
+      box-shadow: 0 5px 25px rgba(30, 50, 70, 0.07);
+    }
+
+    .blog-card h2 {
+      color: #172b4d;
+      font-size: 28px;
+      margin-top: 35px;
+      margin-bottom: 15px;
+    }
+
+    .blog-card h2:first-child {
+      margin-top: 0;
+    }
+
+    .blog-card h3 {
+      color: #1677ff;
+      font-size: 20px;
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+
+    .blog-card p {
+      color: #53636f;
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
+
+    .blog-card strong {
+      color: #172b4d;
+    }
+
+    /* Steps */
+    .steps {
+      background: #f5f9ff;
+      padding: 25px;
+      margin: 25px 0;
+      border-left: 4px solid #1677ff;
+      border-radius: 5px;
+    }
+
+    .steps p {
+      margin-bottom: 8px;
+    }
+
+    /* Lists */
+    .blog-card ul {
+      margin: 15px 0 20px 25px;
+    }
+
+    .blog-card li {
+      margin-bottom: 8px;
+      color: #53636f;
+    }
+
+    /* FAQ */
+    .faq {
+      margin-top: 35px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e5e9ed;
+      padding: 18px 0;
+    }
+
+    .faq-item h3 {
+      color: #172b4d;
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .faq-item p {
+      margin: 0;
+    }
+
+    /* Footer */
+    footer {
+      background: #172b4d;
+      color: #d9e2ec;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 60px;
+    }
+
+    footer p {
+      font-size: 14px;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding: 55px 20px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .blog-card {
+        padding: 25px;
+      }
+
+      .blog-card h2 {
+        font-size: 24px;
+      }
+
+      .blog-card p,
+      .blog-card li {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+
+         <!-- FareKite Logo -->
+    <a href="index.html" class="logo">
+      <img src="Photo.png"
+           alt="FareKite Flights Logo">
+    </a>
+
+      <a href="#" class="logo">FareKite</a>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#tips">Flight Tips</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>FareKite Flights: Compare Cheap Airfare and Find the Right Flight</h1>
+
+      <p>
+        Search and compare flight options, explore affordable airfare,
+        and find a flight that fits your travel plans and budget.
+      </p>
+
+      <a href="https://sites.google.com/view/farekite-travel/" class="hero-button">
+  Read the Guide
+</a>
+
+    </div>
+
+  </section>
+
+
+  <!-- Blog Content -->
+  <main class="blog-container" id="blog">
+
+    <article class="blog-card">
+
+      <h2 id="about">What Are FareKite Flights?</h2>
+
+      <p>
+        Planning a trip is exciting, but finding the right flight at a good
+        price can take time. With so many airlines and travel websites,
+        comparing flights can sometimes feel confusing.
+      </p>
+
+      <p>
+        <a href="https://farekite.com/"><strong>FareKite Flights</strong></a> makes flight searching easier by
+helping travelers compare different flight options and prices in
+one place. You can review fares, routes, travel times, and other
+important details before choosing a flight.
+      </p>
+
+
+      <h2>Why Use FareKite Flights?</h2>
+
+      <h3>1. Compare Flight Prices</h3>
+
+      <p>
+        Flight prices can vary between airlines and travel providers.
+        Comparing different options can help you find a fare that works
+        for your budget.
+      </p>
+
+
+      <h3>2. Find Affordable Airfare</h3>
+
+      <p>
+        If you want to save money on your trip, comparing several fares
+        can help you discover affordable flight options.
+      </p>
+
+
+      <h3>3. Explore Different Routes</h3>
+
+      <p>
+        You can compare different routes and travel times to find an
+        option that matches your schedule and preferences.
+      </p>
+
+
+      <h3>4. Check Important Flight Details</h3>
+
+      <p>
+        Price is not the only thing to consider. Before booking,
+        check flight duration, number of stops, baggage allowance,
+        departure time, and fare conditions.
+      </p>
+
+
+      <h2>How to Find Cheap Flights with FareKite</h2>
+
+      <div class="steps">
+
+        <p><strong>Step 1:</strong> Enter your departure city, destination, travel dates, and number of travelers.</p>
+
+        <p><strong>Step 2:</strong> Compare available flights, airlines, prices, and travel times.</p>
+
+        <p><strong>Step 3:</strong> Check baggage rules, stops, flight duration, and other fare details.</p>
+
+        <p><strong>Step 4:</strong> Choose the flight that best fits your travel plans and budget.</p>
+
+        <p><strong>Step 5:</strong> Continue to the selected booking provider to complete your reservation.</p>
+
+      </div>
+
+
+      <h2 id="tips">Tips for Getting Better Flight Deals</h2>
+
+      <p>
+        Looking for a better airfare deal? These simple tips can help:
+      </p>
+
+      <ul>
+        <li>Compare multiple flight options before booking.</li>
+        <li>Check flexible travel dates.</li>
+        <li>Compare direct and connecting flights.</li>
+        <li>Consider nearby airports when practical.</li>
+        <li>Check baggage fees before choosing a fare.</li>
+        <li>Compare the total price, not only the advertised fare.</li>
+        <li>Book when you find a price that fits your budget.</li>
+      </ul>
+
+
+      <h2>FareKite Flights for Domestic and International Travel</h2>
+
+      <p>
+        Whether you are planning a domestic trip or an international
+        vacation, comparing flights can make the booking process easier.
+      </p>
+
+      <p>
+        For international travel, compare airlines, routes, stopovers,
+        baggage allowances, travel times, and total fares. For domestic
+        trips, comparing different departure times and nearby airports
+        can help you find a convenient option.
+      </p>
+
+
+      <h2>Is FareKite Flights Easy to Use?</h2>
+
+      <p>
+        Yes. The process is simple. Enter your trip information,
+        compare available flight options, review the details, and
+        choose the option that works best for your journey.
+      </p>
+
+      <p>
+        Using a flight comparison service can also save time because
+        you do not have to manually check many airline and travel
+        websites one by one.
+      </p>
+
+
+      <h2>Final Thoughts</h2>
+
+      <p>
+        Finding affordable airfare does not have to be difficult.
+        <strong>FareKite Flights</strong> helps travelers compare flight
+        options and prices, making it easier to find a flight that
+        matches their travel plans and budget.
+      </p>
+
+      <p>
+        Before booking, always check the complete fare details,
+        including baggage, stops, travel time, and booking conditions.
+        Comparing your options can help you make a smarter choice
+        for your next trip.
+      </p>
+
+
+      <!-- FAQ -->
+      <section class="faq" id="faq">
+
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+          <h3>What is FareKite Flights?</h3>
+          <p>
+            FareKite Flights is a flight comparison service that helps
+            travelers compare flight fares and options from different
+            airlines and travel providers.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Can I compare cheap flights on FareKite?</h3>
+          <p>
+            Yes. You can compare available flight options and prices
+            to find an option that fits your travel budget.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How can I find cheaper flights?</h3>
+          <p>
+            Compare multiple airlines, check flexible dates, consider
+            different airports, and review baggage and additional costs
+            before booking.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Can I search for international flights?</h3>
+          <p>
+            Yes. You can search and compare flight options for both
+            domestic and international travel.
+          </p>
+        </div>
+
+      </section>
+
+    </article>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer>
+
+    <p>
+      © 2026 FareKite. Compare flights and plan your next journey with ease.
+    </p>
+
+  </footer>
+
+</body>
+</html>
